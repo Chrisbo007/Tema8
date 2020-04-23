@@ -1,0 +1,62 @@
+body,
+html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #FFFF66;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+main {
+    display: grid;
+    place-items: center;
+    height: 100vh;
+}
+.form {
+    display: flex;
+    flex-direction: column;
+}
+
+input,
+button {
+    min-width: 40vw;
+    font-size: 1rem;
+    padding: 1rem;
+    border-radius: 1rem;
+    border: 1px solid lightgray;
+    outline: none;
+    margin: 1rem;
+}
+
+::placeholder {
+    color: rgb(196, 191, 191);
+}
+
+#validate {
+    display: none;
+}
+
+#validate.show {
+    display: block;
+    text-align: center;
+    color: red;
+}
+
+#terms {
+    display: inline-flex;
+    align-items: center;
+}
+
+#appinfo {
+    font-size: 1rem;
+    padding: 1rem;
+    border-radius: 1rem;
+    max-width: 40vw;
+    text-align: center;
+}
+
+
+
