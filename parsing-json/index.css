@@ -1,0 +1,40 @@
+body,
+html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+main {
+    display: grid;
+    height: 100vh;
+    grid-template-rows: 10vh 1fr;
+    padding: .6rem;
+
+}
+
+input {
+    padding: .6rem;
+    font-size: 18px;
+    
+}
+
+#quotes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+    gap: .6rem;
+}
+
+article {
+    background-color: lightcoral;
+    padding: .6rem;
+    height: 100px;
+    display: grid;
+    place-items: center;
+    box-shadow: 0 0 8px 5px lightgray;
+    color: #333;
+}
