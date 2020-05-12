@@ -1,0 +1,14 @@
+{
+  "version": 3,
+  "file": "bundle.css",
+  "sources": [
+    "../../App.svelte",
+    "../../Activity.svelte"
+  ],
+  "sourcesContent": [
+    "<script>\n\timport Activity from './components/Activity.svelte'\n\n\tlet activity = {}\n\tlet show = false\n\tconst getActivity = () => {\n\t\tshow = false\n\t\tfetch('https://www.boredapi.com/api/activity?type=recreational')\n\t\t\t.then( res => res.json())\n\t\t\t\t.then( json => {\n\t\t\t\t\tactivity = json\n\t\t\t\t\tshow = true\n\t\t\t\t\t}  )\n}\n</script>\n\n<main>\n\t<button on:click={getActivity}>Hit me</button>\n\t\n\t{#if show}\n\t\t <Activity {activity} />\n\t{:else}\n\t\t <h2>Hit me</h2>\n\t{/if}\n\t\n\n</main>\n\n<style>\nmain {\n\tdisplay: grid;\n\tplace-items: center;\n\theight: 100vh;\n\tposition: relative;\n\n}\n\nbutton {\n\tposition: absolute;\n\ttop: 2rem;\n\tbackground: black;\n\tcolor: white;\n\tcursor: pointer;\n\tborder-radius: 50%;\n\tpadding: 1rem\n}\n\n\n\n</style>",
+    "\t\n <script>\n\timport { scale } from 'svelte/transition'\n    export let activity\n </script>   \n    \n    \n    \n    \n<div class=\"activity\" in:scale>\n\t<h2>{activity.activity}</h2>\n\t<p>Type: {activity.type}</p>\n\t<p>Accessibility: {activity.accessibility} </p>\n\t<p>Price: {activity.price} </p>\n\t<p>Participants: {activity.participants}</p>\n\t<p>Link: {activity.link} </p>\n</div>\n\n\n<style>\n.activity {\n\twidth: 60vw;\n\theight: 40vh;\n\tpadding: 2rem;\n\tbackground: #eee;\n\tbox-shadow: 0 0 1rem 1px gray;\n}\n</style>"
+  ],
+  "names": [],
+  "mappings": "AA6BA,IAAI,eAAC,CAAC,AACL,OAAO,CAAE,IAAI,CACb,WAAW,CAAE,MAAM,CACnB,MAAM,CAAE,KAAK,CACb,QAAQ,CAAE,QAAQ,AAEnB,CAAC,AAED,MAAM,eAAC,CAAC,AACP,QAAQ,CAAE,QAAQ,CAClB,GAAG,CAAE,IAAI,CACT,UAAU,CAAE,KAAK,CACjB,KAAK,CAAE,KAAK,CACZ,MAAM,CAAE,OAAO,CACf,aAAa,CAAE,GAAG,CAClB,OAAO,CAAE,IAAI;AACd,CAAC;ACzBD,SAAS,cAAC,CAAC,AACV,KAAK,CAAE,IAAI,CACX,MAAM,CAAE,IAAI,CACZ,OAAO,CAAE,IAAI,CACb,UAAU,CAAE,IAAI,CAChB,UAAU,CAAE,CAAC,CAAC,CAAC,CAAC,IAAI,CAAC,GAAG,CAAC,IAAI,AAC9B,CAAC"
+}
