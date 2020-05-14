@@ -1,0 +1,12 @@
+{
+  "version": 3,
+  "file": "bundle.css",
+  "sources": [
+    "../../App.svelte"
+  ],
+  "sourcesContent": [
+    "\n<script>\n\t\nconst { remote } = require('electron')\nconst { Menu, MenuItem } = remote\n\t\n\tlet info='Nothing happening yet'\n\t\nconst showNotification = () => {\n    let myNotification = new Notification('Hello', {\n      body: 'You are now officially part of the system OS'\n    })\n    myNotification.onclick = () => {\n        info = 'Notification clicked'\n    }\n}\n\n\nconst amIOnline = () => {\n    window.alert(navigator.onLine ? 'Yes, you are online' : 'No, you are offline')\n    info = 'Alert accepted'\n}\n\n\nconst menu = new Menu()\n\tmenu.append(new MenuItem({ label: 'meny 1', click() { info = 'item 1 klikket' } }))\n\tmenu.append(new MenuItem({ type: 'separator' }))\n\tmenu.append(new MenuItem({ label: 'meny 2', click() { info = 'item 2 klikket' } } ))\n\n\nconst context = e => {\n  e.preventDefault() //hindrer det vanlige højreklikk\n  menu.popup({ window: remote.getCurrentWindow() }) //kalder menufunksjon i Electron\n}\n\n</script>\n\n<main>\n    <h1>Svelte in Electron</h1>\n    <hr>\n<div class=\"stuff\" on:contextmenu={context}>\n\n<p>{info}</p>\n\n\t<button on:click={ () => showNotification() }>klikk på meg</button>\n\t\n\t<button on:click={ () => amIOnline() }>Am I online</button>\n\n</main>\n\n<style>\n\tmain {\n\t\ttext-align: center;\n\t\tpadding: 1em;\n\t\tmax-width: 240px;\n\t\tmargin: 0 auto;\n\t}\n\th1 {\n\t\tcolor: #ff3e00;\n\t\ttext-transform: uppercase;\n\t\tfont-size: 4em;\n\t\tfont-weight: 100;\n\t}\n\n\n .stuff {\n    width:100%;\n    height:200px;\n    background-color:lightblue;\n  }\n\t@media (min-width: 640px) {\n\t\tmain {\n\t\t\tmax-width: none;\n\t\t}\n\t}\n</style>"
+  ],
+  "names": [],
+  "mappings": "AAmDC,IAAI,eAAC,CAAC,AACL,UAAU,CAAE,MAAM,CAClB,OAAO,CAAE,GAAG,CACZ,SAAS,CAAE,KAAK,CAChB,MAAM,CAAE,CAAC,CAAC,IAAI,AACf,CAAC,AACD,EAAE,eAAC,CAAC,AACH,KAAK,CAAE,OAAO,CACd,cAAc,CAAE,SAAS,CACzB,SAAS,CAAE,GAAG,CACd,WAAW,CAAE,GAAG,AACjB,CAAC,AAGD,MAAM,eAAC,CAAC,AACL,MAAM,IAAI,CACV,OAAO,KAAK,CACZ,iBAAiB,SAAS,AAC5B,CAAC,AACF,MAAM,AAAC,YAAY,KAAK,CAAC,AAAC,CAAC,AAC1B,IAAI,eAAC,CAAC,AACL,SAAS,CAAE,IAAI,AAChB,CAAC,AACF,CAAC"
+}
