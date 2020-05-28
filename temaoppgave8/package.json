@@ -17,11 +17,11 @@
   "keywords": [],
   "author": "jeffd23",
   "license": "MIT",
-  "config": {
-    "forge": {
-      "packagerConfig": {
-        "icon": "src/AppIcon.icns"
-      },
+  "config": {      
+  "forge": {
+    "packagerConfig": {
+      "icon": "public/AppIcon.icns"
+  },
       "makers": [
         {
           "name": "@electron-forge/maker-squirrel",
