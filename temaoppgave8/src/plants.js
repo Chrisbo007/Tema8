@@ -9,7 +9,7 @@ export const plants = [
     {
         image: './media/plantex1.jpg',
         name: 'Palme',
-        thirsty: 1,
+        thirsty: 2,
         days: ['monday', 'thursday'],
     },
 

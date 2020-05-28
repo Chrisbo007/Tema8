@@ -1,14 +1,10 @@
 <script>
     export let plant
-
+   
     export let remove 
-
+    
     export let showPlant
-
-    const waterDay = (day) => {
-        return plant.days.includes(day)
-    }
-
+    
     const dropColor = (index) => {
         if (plant.thirsty >= index) {
             return './media/bluedrop.png'
@@ -25,21 +21,21 @@
 	<p>{plant.name}</p>
 
     <div class="drop">
-        <img src={dropColor(1)}>
-        <img src={dropColor(2)}>
-        <img src={dropColor(3)}>
+        <img src={dropColor(1)} alt='drop'>
+        <img src={dropColor(2)} alt='drop'>
+        <img src={dropColor(3)} alt='drop'>
     </div>
 
     {#if plant.needWater}
         <button on:click={() => remove(plant)}></button>
     {:else}
-        <span class:active={waterDay('monday')}>M</span>
-        <span class:active={waterDay('tuesday')}>T</span>
-        <span class:active={waterDay('wednesday')}>W</span>
-        <span class:active={waterDay('thursday')}>T</span>
-        <span class="{() => waterDay('friday')}">F</span>
-        <span class:active={waterDay('saturday')}>S</span>
-        <span class:active={waterDay('sunday')}>S</span>
+        <span class={plant.days.includes('monday') ? 'active' : ''}>M</span>
+        <span class={plant.days.includes('tuesday') ? 'active' : ''}>T</span>
+        <span class={plant.days.includes('wednesday') ? 'active' : ''}>W</span>
+        <span class={plant.days.includes('thursday') ? 'active' : ''}>T</span>
+        <span class={plant.days.includes('friday') ? 'active' : ''}>F</span>
+        <span class={plant.days.includes('saturday') ? 'active' : ''}>S</span>
+        <span class={plant.days.includes('sunday') ? 'active' : ''}>S</span>
     {/if}
 </div>
 
@@ -64,7 +60,6 @@
 .plantimage{
     margin-top: -10px;
 }
-
 
 .plantimage img{
     border-radius: 50%;

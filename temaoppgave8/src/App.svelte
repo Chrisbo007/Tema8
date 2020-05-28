@@ -1,41 +1,81 @@
 <script>
+	
 	import Plant from './Plant.svelte'
-
+	
 	import {plants} from './plants'
-
+	
 	import EditPlant from './EditPlant.svelte'
 	
-	let allPlants = plants
-	let needWater = []
-	let garden = []
-	let editPlant = undefined
-
-	const days = ['sunday', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday']
-	let day = days [new Date().getDay()]
-	console.log(day)
-	allPlants.map(p => p.needWater = p.days.includes(day))
-
-	const checkPlants = () => {	
-			needWater = allPlants.filter(plant => plant.needWater)
-			garden = allPlants.filter( plant => !plant.needWater)
-	}
-
-	checkPlants()
-	console.log(allPlants)
+	
+const showNotification = (message) => {
+    let myNotification = new Notification('Plantminder', {
+      body: `${message} plants are thirsty today!`
+    })
+    myNotification.onclick = () => {
+        info = 'Notification clicked'
+    }
+}
 	
 
-	setInterval(checkPlants, 5000)
+	let allPlants = plants
+	
+	let needWater = []
+	
+	let garden = []
+	
+	const days = ['sunday', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday']
+	
+	let day = days [new Date().getDay()]
+	allPlants.map(p => p.needWater = p.days.includes(day))
+	
+	const checkPlants = () => {	
+			needWater = allPlants.filter(plant => plant.needWater)
+			if(needWater.length > 0){
+				console.log('here')
+				showNotification(needWater.length)
+			}
+			garden = allPlants.filter( plant => !plant.needWater)
+	}
+	
+	checkPlants()
 
+	setInterval(checkPlants, 1000 * 60 * 60 * 24)
+	
 	const remove = (plant) => {
 		plant.needWater = false
 		checkPlants()
-		console.log(plant)
 	}
 
+	let editPlant 
+	const closePlant = () => {
+		editPlant = null
+	}
+	
 	const showPlant = (plant) => {
-		console.log(plant)
+			
 		editPlant = plant
 	}
+	
+	const addPlant = () => {
+		editPlant = {
+			image: './media/placeholderimg.jpg',
+			name: '',
+			thirsty: 0,
+			days: [],
+		}
+		allPlants = [editPlant,...allPlants]
+	}
+	
+	const savePlant = (plant) => {
+		//find index of the plant
+		console.log(allPlants)
+		console.log(plant)
+		plant.needWater = plant.days.includes(day)
+		let index = allPlants.findIndex(x => x.name === plant.name)
+		allPlants[index] = plant
+		editPlant = null
+		checkPlants()
+	} 
 	
 </script>
 
@@ -47,12 +87,12 @@
 
 
 {#if editPlant}
-	 <EditPlant {editPlant}/>
+	 <EditPlant {closePlant} {savePlant} myPlant={editPlant}/>
 {:else}
 	<div id="plantview">
 
 	<div id="addplant">	
-		<img id="addbutton" src="../public/media/addplant.png" alt="addbutton">
+		 <div  on:click={() => addPlant(editPlant)}><img class="addbutton" src="../public/media/addplant.png" alt="add"></div>
 		<h1>Add new plant</h1>
 	</div>
 
@@ -105,14 +145,13 @@ main{
 	padding-bottom: 0.4rem;
 }
 
-#addbutton{
-	width: 25%;
-	height: 15%;
+.addbutton {
+	width: 75%;
 	padding: 0.3rem;
 }
 
 #addplant{
-	display: inline-flex;
+	display: flex;
 	justify-content: center;	
 }
 
@@ -140,7 +179,6 @@ p{
 	font-size: 14px;
 	color: #0A0F1D;
 }
-
 
 .plantview{
 	display: grid;
