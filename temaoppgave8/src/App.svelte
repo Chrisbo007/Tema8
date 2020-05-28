@@ -9,7 +9,7 @@
 	
 const showNotification = (message) => {
     let myNotification = new Notification('Plantminder', {
-      body: `${message} plants are thirsty today!`
+      body: `${message} plant(s) are thirsty today!`
     })
     myNotification.onclick = () => {
         info = 'Notification clicked'

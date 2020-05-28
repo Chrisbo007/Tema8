@@ -1520,30 +1520,30 @@ var app = (function () {
     			attr_dev(img, "class", "addbutton svelte-19m7gdd");
     			if (img.src !== (img_src_value = "../public/media/addplant.png")) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "add");
-    			add_location(img, file$2, 94, 46, 1887);
+    			add_location(img, file$2, 94, 46, 1889);
     			attr_dev(div0, "class", "svelte-19m7gdd");
-    			add_location(div0, file$2, 94, 3, 1844);
+    			add_location(div0, file$2, 94, 3, 1846);
     			attr_dev(h1, "class", "svelte-19m7gdd");
-    			add_location(h1, file$2, 95, 2, 1964);
+    			add_location(h1, file$2, 95, 2, 1966);
     			attr_dev(div1, "id", "addplant");
     			attr_dev(div1, "class", "svelte-19m7gdd");
-    			add_location(div1, file$2, 93, 1, 1820);
+    			add_location(div1, file$2, 93, 1, 1822);
     			attr_dev(div2, "id", "addtogarden");
     			attr_dev(div2, "class", "svelte-19m7gdd");
-    			add_location(div2, file$2, 98, 1, 1997);
+    			add_location(div2, file$2, 98, 1, 1999);
     			attr_dev(h20, "class", "svelte-19m7gdd");
-    			add_location(h20, file$2, 101, 1, 2030);
+    			add_location(h20, file$2, 101, 1, 2032);
     			attr_dev(div3, "id", "needwater");
     			attr_dev(div3, "class", "svelte-19m7gdd");
-    			add_location(div3, file$2, 102, 1, 2055);
+    			add_location(div3, file$2, 102, 1, 2057);
     			attr_dev(h21, "class", "svelte-19m7gdd");
-    			add_location(h21, file$2, 111, 2, 2225);
+    			add_location(h21, file$2, 111, 2, 2227);
     			attr_dev(div4, "id", "garden");
     			attr_dev(div4, "class", "svelte-19m7gdd");
-    			add_location(div4, file$2, 112, 1, 2245);
+    			add_location(div4, file$2, 112, 1, 2247);
     			attr_dev(div5, "id", "plantview");
     			attr_dev(div5, "class", "svelte-19m7gdd");
-    			add_location(div5, file$2, 91, 1, 1797);
+    			add_location(div5, file$2, 91, 1, 1799);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div5, anchor);
@@ -1771,7 +1771,7 @@ var app = (function () {
     			h2 = element("h2");
     			h2.textContent = "No thirsty plants";
     			attr_dev(h2, "class", "message svelte-19m7gdd");
-    			add_location(h2, file$2, 106, 3, 2160);
+    			add_location(h2, file$2, 106, 3, 2162);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, h2, anchor);
@@ -1852,7 +1852,7 @@ var app = (function () {
     			h2 = element("h2");
     			h2.textContent = "You have no plants in your garden";
     			attr_dev(h2, "class", "message svelte-19m7gdd");
-    			add_location(h2, file$2, 116, 3, 2334);
+    			add_location(h2, file$2, 116, 3, 2336);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, h2, anchor);
@@ -1953,12 +1953,12 @@ var app = (function () {
     			if (img.src !== (img_src_value = "../public/media/logo_light.png")) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "plantminder logo");
     			attr_dev(img, "class", "svelte-19m7gdd");
-    			add_location(img, file$2, 84, 1, 1637);
+    			add_location(img, file$2, 84, 1, 1639);
     			attr_dev(div, "id", "logo");
     			attr_dev(div, "class", "svelte-19m7gdd");
-    			add_location(div, file$2, 83, 0, 1620);
+    			add_location(div, file$2, 83, 0, 1622);
     			attr_dev(main, "class", "svelte-19m7gdd");
-    			add_location(main, file$2, 81, 0, 1612);
+    			add_location(main, file$2, 81, 0, 1614);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -2026,7 +2026,7 @@ var app = (function () {
     	const showNotification = message => {
     		let myNotification = new Notification("Plantminder",
     		{
-    				body: `${message} plants are thirsty today!`
+    				body: `${message} plant(s) are thirsty today!`
     			});
 
     		myNotification.onclick = () => {
