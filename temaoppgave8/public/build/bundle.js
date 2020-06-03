@@ -919,6 +919,8 @@ var app = (function () {
     	let button1;
     	let t28;
     	let button2;
+    	let t30;
+    	let button3;
     	let dispose;
 
     	const block = {
@@ -976,102 +978,107 @@ var app = (function () {
     			t26 = space();
     			div6 = element("div");
     			button1 = element("button");
-    			button1.textContent = "Close";
+    			button1.textContent = "Remove";
     			t28 = space();
     			button2 = element("button");
-    			button2.textContent = "Save";
+    			button2.textContent = "Close";
+    			t30 = space();
+    			button3 = element("button");
+    			button3.textContent = "Save";
     			if (img0.src !== (img0_src_value = /*myPlant*/ ctx[0].image)) attr_dev(img0, "src", img0_src_value);
     			attr_dev(img0, "alt", "plantphoto");
-    			attr_dev(img0, "class", "svelte-1s6mtme");
-    			add_location(img0, file$1, 22, 12, 429);
-    			attr_dev(button0, "class", "svelte-1s6mtme");
-    			add_location(button0, file$1, 23, 12, 487);
-    			attr_dev(div0, "class", "plantimage svelte-1s6mtme");
-    			add_location(div0, file$1, 21, 8, 391);
-    			attr_dev(h20, "class", "svelte-1s6mtme");
-    			add_location(h20, file$1, 27, 12, 578);
-    			attr_dev(input, "class", "input svelte-1s6mtme");
+    			attr_dev(img0, "class", "svelte-1q68jqt");
+    			add_location(img0, file$1, 25, 12, 458);
+    			attr_dev(button0, "class", "svelte-1q68jqt");
+    			add_location(button0, file$1, 26, 12, 516);
+    			attr_dev(div0, "class", "plantimage svelte-1q68jqt");
+    			add_location(div0, file$1, 24, 8, 420);
+    			attr_dev(h20, "class", "svelte-1q68jqt");
+    			add_location(h20, file$1, 30, 12, 607);
+    			attr_dev(input, "class", "input svelte-1q68jqt");
     			attr_dev(input, "type", "text");
     			attr_dev(input, "placeholder", input_placeholder_value = /*myPlant*/ ctx[0].name);
-    			add_location(input, file$1, 28, 12, 616);
-    			attr_dev(div1, "class", "plantname svelte-1s6mtme");
-    			add_location(div1, file$1, 26, 8, 542);
-    			attr_dev(div2, "class", "photoandname svelte-1s6mtme");
-    			add_location(div2, file$1, 20, 4, 356);
-    			attr_dev(h21, "class", "svelte-1s6mtme");
-    			add_location(h21, file$1, 32, 12, 774);
+    			add_location(input, file$1, 31, 12, 645);
+    			attr_dev(div1, "class", "plantname svelte-1q68jqt");
+    			add_location(div1, file$1, 29, 8, 571);
+    			attr_dev(div2, "class", "photoandname svelte-1q68jqt");
+    			add_location(div2, file$1, 23, 4, 385);
+    			attr_dev(h21, "class", "svelte-1q68jqt");
+    			add_location(h21, file$1, 35, 12, 803);
 
     			attr_dev(span0, "class", span0_class_value = "" + (null_to_empty(/*myPlant*/ ctx[0].days.includes("monday")
     			? "active"
-    			: "") + " svelte-1s6mtme"));
+    			: "") + " svelte-1q68jqt"));
 
-    			add_location(span0, file$1, 33, 12, 822);
+    			add_location(span0, file$1, 36, 12, 851);
 
     			attr_dev(span1, "class", span1_class_value = "" + (null_to_empty(/*myPlant*/ ctx[0].days.includes("tuesday")
     			? "active"
-    			: "") + " svelte-1s6mtme"));
+    			: "") + " svelte-1q68jqt"));
 
-    			add_location(span1, file$1, 39, 12, 1162);
+    			add_location(span1, file$1, 42, 12, 1191);
 
     			attr_dev(span2, "class", span2_class_value = "" + (null_to_empty(/*myPlant*/ ctx[0].days.includes("wednesday")
     			? "active"
-    			: "") + " svelte-1s6mtme"));
+    			: "") + " svelte-1q68jqt"));
 
-    			add_location(span2, file$1, 45, 12, 1508);
+    			add_location(span2, file$1, 48, 12, 1537);
 
     			attr_dev(span3, "class", span3_class_value = "" + (null_to_empty(/*myPlant*/ ctx[0].days.includes("thursday")
     			? "active"
-    			: "") + " svelte-1s6mtme"));
+    			: "") + " svelte-1q68jqt"));
 
-    			add_location(span3, file$1, 51, 12, 1863);
+    			add_location(span3, file$1, 54, 12, 1892);
 
     			attr_dev(span4, "class", span4_class_value = "" + (null_to_empty(/*myPlant*/ ctx[0].days.includes("friday")
     			? "active"
-    			: "") + " svelte-1s6mtme"));
+    			: "") + " svelte-1q68jqt"));
 
-    			add_location(span4, file$1, 57, 12, 2213);
+    			add_location(span4, file$1, 60, 12, 2242);
 
     			attr_dev(span5, "class", span5_class_value = "" + (null_to_empty(/*myPlant*/ ctx[0].days.includes("saturday")
     			? "active"
-    			: "") + " svelte-1s6mtme"));
+    			: "") + " svelte-1q68jqt"));
 
-    			add_location(span5, file$1, 63, 12, 2554);
+    			add_location(span5, file$1, 66, 12, 2583);
 
     			attr_dev(span6, "class", span6_class_value = "" + (null_to_empty(/*myPlant*/ ctx[0].days.includes("sunday")
     			? "active"
-    			: "") + " svelte-1s6mtme"));
+    			: "") + " svelte-1q68jqt"));
 
-    			add_location(span6, file$1, 69, 12, 2904);
-    			attr_dev(div3, "class", "waterday svelte-1s6mtme");
-    			add_location(div3, file$1, 31, 8, 739);
-    			attr_dev(h22, "class", "svelte-1s6mtme");
-    			add_location(h22, file$1, 79, 12, 3295);
-    			if (img1.src !== (img1_src_value = /*dropColor*/ ctx[3](/*myPlant*/ ctx[0], 1))) attr_dev(img1, "src", img1_src_value);
+    			add_location(span6, file$1, 72, 12, 2933);
+    			attr_dev(div3, "class", "waterday svelte-1q68jqt");
+    			add_location(div3, file$1, 34, 8, 768);
+    			attr_dev(h22, "class", "svelte-1q68jqt");
+    			add_location(h22, file$1, 82, 12, 3324);
+    			if (img1.src !== (img1_src_value = /*dropColor*/ ctx[4](/*myPlant*/ ctx[0], 1))) attr_dev(img1, "src", img1_src_value);
     			attr_dev(img1, "alt", "drop");
-    			attr_dev(img1, "class", "svelte-1s6mtme");
-    			add_location(img1, file$1, 81, 20, 3375);
-    			if (img2.src !== (img2_src_value = /*dropColor*/ ctx[3](/*myPlant*/ ctx[0], 2))) attr_dev(img2, "src", img2_src_value);
+    			attr_dev(img1, "class", "svelte-1q68jqt");
+    			add_location(img1, file$1, 84, 20, 3404);
+    			if (img2.src !== (img2_src_value = /*dropColor*/ ctx[4](/*myPlant*/ ctx[0], 2))) attr_dev(img2, "src", img2_src_value);
     			attr_dev(img2, "alt", "drop");
-    			attr_dev(img2, "class", "svelte-1s6mtme");
-    			add_location(img2, file$1, 90, 20, 3722);
-    			if (img3.src !== (img3_src_value = /*dropColor*/ ctx[3](/*myPlant*/ ctx[0], 3))) attr_dev(img3, "src", img3_src_value);
+    			attr_dev(img2, "class", "svelte-1q68jqt");
+    			add_location(img2, file$1, 93, 20, 3751);
+    			if (img3.src !== (img3_src_value = /*dropColor*/ ctx[4](/*myPlant*/ ctx[0], 3))) attr_dev(img3, "src", img3_src_value);
     			attr_dev(img3, "alt", "drop");
-    			attr_dev(img3, "class", "svelte-1s6mtme");
-    			add_location(img3, file$1, 98, 20, 4043);
+    			attr_dev(img3, "class", "svelte-1q68jqt");
+    			add_location(img3, file$1, 101, 20, 4072);
     			attr_dev(div4, "class", "drop");
-    			add_location(div4, file$1, 80, 16, 3336);
-    			attr_dev(div5, "class", "wateramount svelte-1s6mtme");
-    			add_location(div5, file$1, 78, 8, 3257);
-    			attr_dev(button1, "class", "svelte-1s6mtme");
-    			add_location(button1, file$1, 110, 12, 4403);
-    			attr_dev(button2, "class", "svelte-1s6mtme");
-    			add_location(button2, file$1, 111, 12, 4460);
-    			attr_dev(div6, "class", "closeandsave svelte-1s6mtme");
-    			add_location(div6, file$1, 109, 8, 4364);
-    			attr_dev(div7, "class", "container svelte-1s6mtme");
-    			add_location(div7, file$1, 19, 4, 328);
-    			attr_dev(div8, "class", "plantedit svelte-1s6mtme");
-    			add_location(div8, file$1, 18, 0, 300);
+    			add_location(div4, file$1, 83, 16, 3365);
+    			attr_dev(div5, "class", "wateramount svelte-1q68jqt");
+    			add_location(div5, file$1, 81, 8, 3286);
+    			attr_dev(button1, "class", "svelte-1q68jqt");
+    			add_location(button1, file$1, 113, 12, 4432);
+    			attr_dev(button2, "class", "svelte-1q68jqt");
+    			add_location(button2, file$1, 114, 12, 4504);
+    			attr_dev(button3, "class", "svelte-1q68jqt");
+    			add_location(button3, file$1, 115, 12, 4561);
+    			attr_dev(div6, "class", "closeandsave svelte-1q68jqt");
+    			add_location(div6, file$1, 112, 8, 4393);
+    			attr_dev(div7, "class", "container svelte-1q68jqt");
+    			add_location(div7, file$1, 22, 4, 357);
+    			attr_dev(div8, "class", "plantedit svelte-1q68jqt");
+    			add_location(div8, file$1, 21, 0, 329);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -1129,21 +1136,24 @@ var app = (function () {
     			append_dev(div6, button1);
     			append_dev(div6, t28);
     			append_dev(div6, button2);
+    			append_dev(div6, t30);
+    			append_dev(div6, button3);
 
     			dispose = [
-    				listen_dev(input, "input", /*input_input_handler*/ ctx[4]),
-    				listen_dev(span0, "click", /*click_handler*/ ctx[5], false, false, false),
-    				listen_dev(span1, "click", /*click_handler_1*/ ctx[6], false, false, false),
-    				listen_dev(span2, "click", /*click_handler_2*/ ctx[7], false, false, false),
-    				listen_dev(span3, "click", /*click_handler_3*/ ctx[8], false, false, false),
-    				listen_dev(span4, "click", /*click_handler_4*/ ctx[9], false, false, false),
-    				listen_dev(span5, "click", /*click_handler_5*/ ctx[10], false, false, false),
-    				listen_dev(span6, "click", /*click_handler_6*/ ctx[11], false, false, false),
-    				listen_dev(img1, "click", /*click_handler_7*/ ctx[12], false, false, false),
-    				listen_dev(img2, "click", /*click_handler_8*/ ctx[13], false, false, false),
-    				listen_dev(img3, "click", /*click_handler_9*/ ctx[14], false, false, false),
+    				listen_dev(input, "input", /*input_input_handler*/ ctx[5]),
+    				listen_dev(span0, "click", /*click_handler*/ ctx[6], false, false, false),
+    				listen_dev(span1, "click", /*click_handler_1*/ ctx[7], false, false, false),
+    				listen_dev(span2, "click", /*click_handler_2*/ ctx[8], false, false, false),
+    				listen_dev(span3, "click", /*click_handler_3*/ ctx[9], false, false, false),
+    				listen_dev(span4, "click", /*click_handler_4*/ ctx[10], false, false, false),
+    				listen_dev(span5, "click", /*click_handler_5*/ ctx[11], false, false, false),
+    				listen_dev(span6, "click", /*click_handler_6*/ ctx[12], false, false, false),
+    				listen_dev(img1, "click", /*click_handler_7*/ ctx[13], false, false, false),
+    				listen_dev(img2, "click", /*click_handler_8*/ ctx[14], false, false, false),
+    				listen_dev(img3, "click", /*click_handler_9*/ ctx[15], false, false, false),
+    				listen_dev(button1, "click", /*click_handler_10*/ ctx[16], false, false, false),
     				listen_dev(
-    					button1,
+    					button2,
     					"click",
     					function () {
     						if (is_function(/*closePlant*/ ctx[1])) /*closePlant*/ ctx[1].apply(this, arguments);
@@ -1152,7 +1162,7 @@ var app = (function () {
     					false,
     					false
     				),
-    				listen_dev(button2, "click", /*click_handler_10*/ ctx[15], false, false, false)
+    				listen_dev(button3, "click", /*click_handler_11*/ ctx[17], false, false, false)
     			];
     		},
     		p: function update(new_ctx, [dirty]) {
@@ -1172,55 +1182,55 @@ var app = (function () {
 
     			if (dirty & /*myPlant*/ 1 && span0_class_value !== (span0_class_value = "" + (null_to_empty(/*myPlant*/ ctx[0].days.includes("monday")
     			? "active"
-    			: "") + " svelte-1s6mtme"))) {
+    			: "") + " svelte-1q68jqt"))) {
     				attr_dev(span0, "class", span0_class_value);
     			}
 
     			if (dirty & /*myPlant*/ 1 && span1_class_value !== (span1_class_value = "" + (null_to_empty(/*myPlant*/ ctx[0].days.includes("tuesday")
     			? "active"
-    			: "") + " svelte-1s6mtme"))) {
+    			: "") + " svelte-1q68jqt"))) {
     				attr_dev(span1, "class", span1_class_value);
     			}
 
     			if (dirty & /*myPlant*/ 1 && span2_class_value !== (span2_class_value = "" + (null_to_empty(/*myPlant*/ ctx[0].days.includes("wednesday")
     			? "active"
-    			: "") + " svelte-1s6mtme"))) {
+    			: "") + " svelte-1q68jqt"))) {
     				attr_dev(span2, "class", span2_class_value);
     			}
 
     			if (dirty & /*myPlant*/ 1 && span3_class_value !== (span3_class_value = "" + (null_to_empty(/*myPlant*/ ctx[0].days.includes("thursday")
     			? "active"
-    			: "") + " svelte-1s6mtme"))) {
+    			: "") + " svelte-1q68jqt"))) {
     				attr_dev(span3, "class", span3_class_value);
     			}
 
     			if (dirty & /*myPlant*/ 1 && span4_class_value !== (span4_class_value = "" + (null_to_empty(/*myPlant*/ ctx[0].days.includes("friday")
     			? "active"
-    			: "") + " svelte-1s6mtme"))) {
+    			: "") + " svelte-1q68jqt"))) {
     				attr_dev(span4, "class", span4_class_value);
     			}
 
     			if (dirty & /*myPlant*/ 1 && span5_class_value !== (span5_class_value = "" + (null_to_empty(/*myPlant*/ ctx[0].days.includes("saturday")
     			? "active"
-    			: "") + " svelte-1s6mtme"))) {
+    			: "") + " svelte-1q68jqt"))) {
     				attr_dev(span5, "class", span5_class_value);
     			}
 
     			if (dirty & /*myPlant*/ 1 && span6_class_value !== (span6_class_value = "" + (null_to_empty(/*myPlant*/ ctx[0].days.includes("sunday")
     			? "active"
-    			: "") + " svelte-1s6mtme"))) {
+    			: "") + " svelte-1q68jqt"))) {
     				attr_dev(span6, "class", span6_class_value);
     			}
 
-    			if (dirty & /*myPlant*/ 1 && img1.src !== (img1_src_value = /*dropColor*/ ctx[3](/*myPlant*/ ctx[0], 1))) {
+    			if (dirty & /*myPlant*/ 1 && img1.src !== (img1_src_value = /*dropColor*/ ctx[4](/*myPlant*/ ctx[0], 1))) {
     				attr_dev(img1, "src", img1_src_value);
     			}
 
-    			if (dirty & /*myPlant*/ 1 && img2.src !== (img2_src_value = /*dropColor*/ ctx[3](/*myPlant*/ ctx[0], 2))) {
+    			if (dirty & /*myPlant*/ 1 && img2.src !== (img2_src_value = /*dropColor*/ ctx[4](/*myPlant*/ ctx[0], 2))) {
     				attr_dev(img2, "src", img2_src_value);
     			}
 
-    			if (dirty & /*myPlant*/ 1 && img3.src !== (img3_src_value = /*dropColor*/ ctx[3](/*myPlant*/ ctx[0], 3))) {
+    			if (dirty & /*myPlant*/ 1 && img3.src !== (img3_src_value = /*dropColor*/ ctx[4](/*myPlant*/ ctx[0], 3))) {
     				attr_dev(img3, "src", img3_src_value);
     			}
     		},
@@ -1247,6 +1257,7 @@ var app = (function () {
     	let { myPlant } = $$props;
     	let { closePlant } = $$props;
     	let { savePlant } = $$props;
+    	let { deletePlant } = $$props;
 
     	const dropColor = (plant, index) => {
     		if (plant.thirsty >= index) {
@@ -1256,7 +1267,7 @@ var app = (function () {
     		}
     	};
 
-    	const writable_props = ["myPlant", "closePlant", "savePlant"];
+    	const writable_props = ["myPlant", "closePlant", "savePlant", "deletePlant"];
 
     	Object.keys($$props).forEach(key => {
     		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== "$$") console_1.warn(`<EditPlant> was created with unknown prop '${key}'`);
@@ -1308,18 +1319,21 @@ var app = (function () {
     		$$invalidate(0, myPlant.thirsty = 3, myPlant);
     	};
 
-    	const click_handler_10 = () => savePlant(myPlant);
+    	const click_handler_10 = () => deletePlant(myPlant);
+    	const click_handler_11 = () => savePlant(myPlant);
 
     	$$self.$set = $$props => {
     		if ("myPlant" in $$props) $$invalidate(0, myPlant = $$props.myPlant);
     		if ("closePlant" in $$props) $$invalidate(1, closePlant = $$props.closePlant);
     		if ("savePlant" in $$props) $$invalidate(2, savePlant = $$props.savePlant);
+    		if ("deletePlant" in $$props) $$invalidate(3, deletePlant = $$props.deletePlant);
     	};
 
     	$$self.$capture_state = () => ({
     		myPlant,
     		closePlant,
     		savePlant,
+    		deletePlant,
     		dropColor
     	});
 
@@ -1327,6 +1341,7 @@ var app = (function () {
     		if ("myPlant" in $$props) $$invalidate(0, myPlant = $$props.myPlant);
     		if ("closePlant" in $$props) $$invalidate(1, closePlant = $$props.closePlant);
     		if ("savePlant" in $$props) $$invalidate(2, savePlant = $$props.savePlant);
+    		if ("deletePlant" in $$props) $$invalidate(3, deletePlant = $$props.deletePlant);
     	};
 
     	if ($$props && "$$inject" in $$props) {
@@ -1337,6 +1352,7 @@ var app = (function () {
     		myPlant,
     		closePlant,
     		savePlant,
+    		deletePlant,
     		dropColor,
     		input_input_handler,
     		click_handler,
@@ -1349,14 +1365,21 @@ var app = (function () {
     		click_handler_7,
     		click_handler_8,
     		click_handler_9,
-    		click_handler_10
+    		click_handler_10,
+    		click_handler_11
     	];
     }
 
     class EditPlant extends SvelteComponentDev {
     	constructor(options) {
     		super(options);
-    		init(this, options, instance$1, create_fragment$1, safe_not_equal, { myPlant: 0, closePlant: 1, savePlant: 2 });
+
+    		init(this, options, instance$1, create_fragment$1, safe_not_equal, {
+    			myPlant: 0,
+    			closePlant: 1,
+    			savePlant: 2,
+    			deletePlant: 3
+    		});
 
     		dispatch_dev("SvelteRegisterComponent", {
     			component: this,
@@ -1378,6 +1401,10 @@ var app = (function () {
 
     		if (/*savePlant*/ ctx[2] === undefined && !("savePlant" in props)) {
     			console_1.warn("<EditPlant> was created without expected prop 'savePlant'");
+    		}
+
+    		if (/*deletePlant*/ ctx[3] === undefined && !("deletePlant" in props)) {
+    			console_1.warn("<EditPlant> was created without expected prop 'deletePlant'");
     		}
     	}
 
@@ -1404,6 +1431,14 @@ var app = (function () {
     	set savePlant(value) {
     		throw new Error("<EditPlant>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
     	}
+
+    	get deletePlant() {
+    		throw new Error("<EditPlant>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set deletePlant(value) {
+    		throw new Error("<EditPlant>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
     }
 
     /* src/App.svelte generated by Svelte v3.19.1 */
@@ -1411,17 +1446,17 @@ var app = (function () {
 
     function get_each_context(ctx, list, i) {
     	const child_ctx = ctx.slice();
-    	child_ctx[14] = list[i];
+    	child_ctx[15] = list[i];
     	return child_ctx;
     }
 
     function get_each_context_1(ctx, list, i) {
     	const child_ctx = ctx.slice();
-    	child_ctx[14] = list[i];
+    	child_ctx[15] = list[i];
     	return child_ctx;
     }
 
-    // (91:0) {:else}
+    // (102:0) {:else}
     function create_else_block$1(ctx) {
     	let div5;
     	let div1;
@@ -1517,33 +1552,33 @@ var app = (function () {
     				each1_else.c();
     			}
 
-    			attr_dev(img, "class", "addbutton svelte-19m7gdd");
+    			attr_dev(img, "class", "addbutton svelte-1w3ebel");
     			if (img.src !== (img_src_value = "../public/media/addplant.png")) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "add");
-    			add_location(img, file$2, 94, 46, 1889);
-    			attr_dev(div0, "class", "svelte-19m7gdd");
-    			add_location(div0, file$2, 94, 3, 1846);
-    			attr_dev(h1, "class", "svelte-19m7gdd");
-    			add_location(h1, file$2, 95, 2, 1966);
+    			add_location(img, file$2, 105, 46, 2112);
+    			attr_dev(div0, "class", "svelte-1w3ebel");
+    			add_location(div0, file$2, 105, 3, 2069);
+    			attr_dev(h1, "class", "svelte-1w3ebel");
+    			add_location(h1, file$2, 106, 2, 2189);
     			attr_dev(div1, "id", "addplant");
-    			attr_dev(div1, "class", "svelte-19m7gdd");
-    			add_location(div1, file$2, 93, 1, 1822);
+    			attr_dev(div1, "class", "svelte-1w3ebel");
+    			add_location(div1, file$2, 104, 1, 2045);
     			attr_dev(div2, "id", "addtogarden");
-    			attr_dev(div2, "class", "svelte-19m7gdd");
-    			add_location(div2, file$2, 98, 1, 1999);
-    			attr_dev(h20, "class", "svelte-19m7gdd");
-    			add_location(h20, file$2, 101, 1, 2032);
+    			attr_dev(div2, "class", "svelte-1w3ebel");
+    			add_location(div2, file$2, 109, 1, 2222);
+    			attr_dev(h20, "class", "svelte-1w3ebel");
+    			add_location(h20, file$2, 112, 1, 2255);
     			attr_dev(div3, "id", "needwater");
-    			attr_dev(div3, "class", "svelte-19m7gdd");
-    			add_location(div3, file$2, 102, 1, 2057);
-    			attr_dev(h21, "class", "svelte-19m7gdd");
-    			add_location(h21, file$2, 111, 2, 2227);
+    			attr_dev(div3, "class", "svelte-1w3ebel");
+    			add_location(div3, file$2, 113, 1, 2280);
+    			attr_dev(h21, "class", "svelte-1w3ebel");
+    			add_location(h21, file$2, 122, 2, 2450);
     			attr_dev(div4, "id", "garden");
-    			attr_dev(div4, "class", "svelte-19m7gdd");
-    			add_location(div4, file$2, 112, 1, 2247);
+    			attr_dev(div4, "class", "svelte-1w3ebel");
+    			add_location(div4, file$2, 123, 1, 2470);
     			attr_dev(div5, "id", "plantview");
-    			attr_dev(div5, "class", "svelte-19m7gdd");
-    			add_location(div5, file$2, 91, 1, 1799);
+    			attr_dev(div5, "class", "svelte-1w3ebel");
+    			add_location(div5, file$2, 102, 0, 2022);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div5, anchor);
@@ -1581,7 +1616,7 @@ var app = (function () {
     			}
 
     			current = true;
-    			dispose = listen_dev(div0, "click", /*click_handler*/ ctx[13], false, false, false);
+    			dispose = listen_dev(div0, "click", /*click_handler*/ ctx[14], false, false, false);
     		},
     		p: function update(ctx, dirty) {
     			if (dirty & /*needWater, remove, showPlant*/ 41) {
@@ -1704,14 +1739,14 @@ var app = (function () {
     		block,
     		id: create_else_block$1.name,
     		type: "else",
-    		source: "(91:0) {:else}",
+    		source: "(102:0) {:else}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (89:0) {#if editPlant}
+    // (100:0) {#if editPlant}
     function create_if_block$1(ctx) {
     	let current;
 
@@ -1719,6 +1754,7 @@ var app = (function () {
     			props: {
     				closePlant: /*closePlant*/ ctx[4],
     				savePlant: /*savePlant*/ ctx[7],
+    				deletePlant: /*deletePlant*/ ctx[8],
     				myPlant: /*editPlant*/ ctx[2]
     			},
     			$$inline: true
@@ -1755,14 +1791,14 @@ var app = (function () {
     		block,
     		id: create_if_block$1.name,
     		type: "if",
-    		source: "(89:0) {#if editPlant}",
+    		source: "(100:0) {#if editPlant}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (106:2) {:else}
+    // (117:2) {:else}
     function create_else_block_2(ctx) {
     	let h2;
 
@@ -1770,8 +1806,8 @@ var app = (function () {
     		c: function create() {
     			h2 = element("h2");
     			h2.textContent = "No thirsty plants";
-    			attr_dev(h2, "class", "message svelte-19m7gdd");
-    			add_location(h2, file$2, 106, 3, 2162);
+    			attr_dev(h2, "class", "message svelte-1w3ebel");
+    			add_location(h2, file$2, 117, 3, 2385);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, h2, anchor);
@@ -1785,20 +1821,20 @@ var app = (function () {
     		block,
     		id: create_else_block_2.name,
     		type: "else",
-    		source: "(106:2) {:else}",
+    		source: "(117:2) {:else}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (104:2) {#each needWater as plant}
+    // (115:2) {#each needWater as plant}
     function create_each_block_1(ctx) {
     	let current;
 
     	const plant = new Plant({
     			props: {
-    				plant: /*plant*/ ctx[14],
+    				plant: /*plant*/ ctx[15],
     				remove: /*remove*/ ctx[3],
     				showPlant: /*showPlant*/ ctx[5]
     			},
@@ -1815,7 +1851,7 @@ var app = (function () {
     		},
     		p: function update(ctx, dirty) {
     			const plant_changes = {};
-    			if (dirty & /*needWater*/ 1) plant_changes.plant = /*plant*/ ctx[14];
+    			if (dirty & /*needWater*/ 1) plant_changes.plant = /*plant*/ ctx[15];
     			plant.$set(plant_changes);
     		},
     		i: function intro(local) {
@@ -1836,14 +1872,14 @@ var app = (function () {
     		block,
     		id: create_each_block_1.name,
     		type: "each",
-    		source: "(104:2) {#each needWater as plant}",
+    		source: "(115:2) {#each needWater as plant}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (116:2) {:else}
+    // (127:2) {:else}
     function create_else_block_1(ctx) {
     	let h2;
 
@@ -1851,8 +1887,8 @@ var app = (function () {
     		c: function create() {
     			h2 = element("h2");
     			h2.textContent = "You have no plants in your garden";
-    			attr_dev(h2, "class", "message svelte-19m7gdd");
-    			add_location(h2, file$2, 116, 3, 2336);
+    			attr_dev(h2, "class", "message svelte-1w3ebel");
+    			add_location(h2, file$2, 127, 3, 2559);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, h2, anchor);
@@ -1866,20 +1902,20 @@ var app = (function () {
     		block,
     		id: create_else_block_1.name,
     		type: "else",
-    		source: "(116:2) {:else}",
+    		source: "(127:2) {:else}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (114:2) {#each garden as plant}
+    // (125:2) {#each garden as plant}
     function create_each_block(ctx) {
     	let current;
 
     	const plant = new Plant({
     			props: {
-    				plant: /*plant*/ ctx[14],
+    				plant: /*plant*/ ctx[15],
     				showPlant: /*showPlant*/ ctx[5]
     			},
     			$$inline: true
@@ -1895,7 +1931,7 @@ var app = (function () {
     		},
     		p: function update(ctx, dirty) {
     			const plant_changes = {};
-    			if (dirty & /*garden*/ 2) plant_changes.plant = /*plant*/ ctx[14];
+    			if (dirty & /*garden*/ 2) plant_changes.plant = /*plant*/ ctx[15];
     			plant.$set(plant_changes);
     		},
     		i: function intro(local) {
@@ -1916,7 +1952,7 @@ var app = (function () {
     		block,
     		id: create_each_block.name,
     		type: "each",
-    		source: "(114:2) {#each garden as plant}",
+    		source: "(125:2) {#each garden as plant}",
     		ctx
     	});
 
@@ -1952,13 +1988,13 @@ var app = (function () {
     			if_block.c();
     			if (img.src !== (img_src_value = "../public/media/logo_light.png")) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "plantminder logo");
-    			attr_dev(img, "class", "svelte-19m7gdd");
-    			add_location(img, file$2, 84, 1, 1639);
+    			attr_dev(img, "class", "svelte-1w3ebel");
+    			add_location(img, file$2, 95, 1, 1849);
     			attr_dev(div, "id", "logo");
-    			attr_dev(div, "class", "svelte-19m7gdd");
-    			add_location(div, file$2, 83, 0, 1622);
-    			attr_dev(main, "class", "svelte-19m7gdd");
-    			add_location(main, file$2, 81, 0, 1614);
+    			attr_dev(div, "class", "svelte-1w3ebel");
+    			add_location(div, file$2, 94, 0, 1832);
+    			attr_dev(main, "class", "svelte-1w3ebel");
+    			add_location(main, file$2, 92, 0, 1824);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -2093,6 +2129,19 @@ var app = (function () {
     		checkPlants();
     	};
 
+    	const deletePlant = clickedPlant => {
+    		allPlants = allPlants.filter(plant => {
+    			if (plant.name !== clickedPlant.name) {
+    				return plant;
+    			}
+
+    			return undefined;
+    		});
+
+    		$$invalidate(2, editPlant = null);
+    		checkPlants();
+    	};
+
     	const click_handler = () => addPlant();
 
     	$$self.$capture_state = () => ({
@@ -2112,11 +2161,13 @@ var app = (function () {
     		showPlant,
     		addPlant,
     		savePlant,
+    		deletePlant,
     		Notification,
     		info,
     		Date,
     		console,
-    		setInterval
+    		setInterval,
+    		undefined
     	});
 
     	$$self.$inject_state = $$props => {
@@ -2140,6 +2191,7 @@ var app = (function () {
     		showPlant,
     		addPlant,
     		savePlant,
+    		deletePlant,
     		allPlants,
     		showNotification,
     		days,

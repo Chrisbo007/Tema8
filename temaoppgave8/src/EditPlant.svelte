@@ -5,6 +5,8 @@
     
     export let savePlant
 
+    export let deletePlant
+
 
      const dropColor = (plant, index) => {
         if (plant.thirsty >= index) {
@@ -13,6 +15,7 @@
             return './media/drop.png'
         }
     }
+
 
 </script>
 
@@ -108,6 +111,7 @@
         </div>
 
         <div class="closeandsave">
+            <button on:click={()=>deletePlant(myPlant)}>Remove</button>
             <button on:click={closePlant}>Close</button>
             <button on:click={()=>savePlant(myPlant)}>Save</button>
         </div>
@@ -159,6 +163,7 @@
     font-size: 12px;
     font-family: './media/fonts/hoeflerText Bold.otf';
     width: 100px;
+    background-color: white;
 }
 
 .plantname{
@@ -203,12 +208,15 @@ h2 {
 
 .closeandsave button{
     border-radius: 20px;
-    width: 80px;
+    width: 50px;
     height: 25px;
     text-align: center;
     font-family: './media/fonts/hoeflerText Bold.otf';
-    font-size: 14px;
+    font-size: 12px;
+    margin-top: 4rem;
     margin-right: 0.5rem;
+    color: black;
+    background-color: white;
 }
 
  span.active{

@@ -46,13 +46,13 @@ const showNotification = (message) => {
 		checkPlants()
 	}
 
+
 	let editPlant 
 	const closePlant = () => {
 		editPlant = null
 	}
 	
 	const showPlant = (plant) => {
-			
 		editPlant = plant
 	}
 	
@@ -76,6 +76,17 @@ const showNotification = (message) => {
 		editPlant = null
 		checkPlants()
 	} 
+
+	const deletePlant = (clickedPlant) => {
+		allPlants = allPlants.filter((plant) =>{
+			if(plant.name !== clickedPlant.name) {
+				return plant;
+			}
+			return undefined
+		})
+		editPlant = null
+		checkPlants()
+	}
 	
 </script>
 
@@ -87,9 +98,9 @@ const showNotification = (message) => {
 
 
 {#if editPlant}
-	 <EditPlant {closePlant} {savePlant} myPlant={editPlant}/>
+	 <EditPlant {closePlant} {savePlant} {deletePlant} myPlant={editPlant}/>
 {:else}
-	<div id="plantview">
+<div id="plantview">
 
 	<div id="addplant">	
 		 <div  on:click={() => addPlant(editPlant)}><img class="addbutton" src="../public/media/addplant.png" alt="add"></div>
@@ -116,9 +127,10 @@ const showNotification = (message) => {
 		{:else}
 			<h2 class="message">You have no plants in your garden</h2>
 		{/each}
-	</div>
 
 	</div>
+
+</div>
 
 {/if}
 
@@ -194,5 +206,6 @@ p{
 	gap: 1.5rem;
 	padding: 0.5rem;
 }
+
   
 </style>
